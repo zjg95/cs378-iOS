@@ -8,5 +8,9 @@
 
 import Foundation
 
-println("Hello, World!")
+func main(){
+    println("Hello world!")
+}
+
+main()
 
