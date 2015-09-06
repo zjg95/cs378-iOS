@@ -27,16 +27,19 @@ class Automobile {
     // constructor
     // -----------
     
-    init () {
-        
+    init (make : String, model : String, numberOfDoors : Int, speed : Int) {
+        self.model = model
+        self.make  = make
+        self.speed = speed
+        self.numberOfDoors = numberOfDoors
     }
     
     // ------
     // create
     // ------
     
-    func create () -> Int {
-        return 0
+    func create (make : String, model : String, numberOfDoors : Int, speed : Int) -> Automobile {
+        return Automobile (make: make, model: model, numberOfDoors: numberOfDoors, speed: speed)
     }
     
     // ----
