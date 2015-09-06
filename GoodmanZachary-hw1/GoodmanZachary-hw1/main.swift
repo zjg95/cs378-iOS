@@ -95,7 +95,7 @@ class Automobile {
     // -----------
     
     func description () {
-        
+        println("Make: \(make), Model: \(model), NumDoors: \(numberOfDoors), Speed: \(speed)")
     }
 }
 
