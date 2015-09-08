@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E81FAB41B9F8D25000BD594 /* Automobile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E81FAB31B9F8D25000BD594 /* Automobile.swift */; };
 		8EFBBD6F1B9A32E30095C0B5 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFBBD6E1B9A32E30095C0B5 /* main.swift */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8E81FAB31B9F8D25000BD594 /* Automobile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Automobile.swift; sourceTree = "<group>"; };
 		8EFBBD6B1B9A32E30095C0B5 /* GoodmanZachary-hw1 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "GoodmanZachary-hw1"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EFBBD6E1B9A32E30095C0B5 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				8EFBBD6E1B9A32E30095C0B5 /* main.swift */,
+				8E81FAB31B9F8D25000BD594 /* Automobile.swift */,
 			);
 			path = "GoodmanZachary-hw1";
 			sourceTree = "<group>";
@@ -118,6 +121,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E81FAB41B9F8D25000BD594 /* Automobile.swift in Sources */,
 				8EFBBD6F1B9A32E30095C0B5 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -236,6 +240,7 @@
 				8EFBBD741B9A32E30095C0B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
