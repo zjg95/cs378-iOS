@@ -17,6 +17,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var myLabel: UILabel!
     
     @IBAction func btnSaveClicked(sender: AnyObject) {
+        dismissKeyboard()
         if nameField.text.isEmpty || cityField.text.isEmpty {
             myLabel.text = "You must enter a value for *both* name and city!!"
         }
@@ -32,10 +33,17 @@ class ViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
+    func dismissKeyboard(){
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        nameField.delegate = self
         // Do any additional setup after loading the view, typically from a nib.
+        var tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        view.addGestureRecognizer(tap)
+        nameField.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
