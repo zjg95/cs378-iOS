@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>6248C17C-86F7-4EE7-AB9B-EEBC41513543</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>GoodmanZachary-hw3</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>0FCF9B5E870D187BFD15EFF63CC70C232D3C7264</key>
 		<string>github.com:zjg95/cs378-iOS.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>GoodmanZachary-hw3/GoodmanZachary-hw3.xcodeproj/project.xcworkspace</string>
+	<string>GoodmanZachary-hw3/GoodmanZachary-hw3.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>0FCF9B5E870D187BFD15EFF63CC70C232D3C7264</key>
