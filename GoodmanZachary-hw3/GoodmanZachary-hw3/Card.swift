@@ -25,7 +25,7 @@ class Card {
     
     private var name :  String {
         get {
-            return suit + value
+            return suit + " " + value
         }
     }
     
@@ -36,6 +36,6 @@ class Card {
     init (s : String, v : String) {
         self.suit  = s
         self.value = v
-        self.img   = UIImage(named : name + ".png")
+        self.img   = UIImage(named : suit + value + ".png")
     }
 }
