@@ -22,9 +22,10 @@ class Card {
     private var img : UIImage!
     private var suit :  String = ""
     private var value : String = ""
+    
     private var name :  String {
         get {
-            return value + " of " + suit
+            return suit + value
         }
     }
     
@@ -32,9 +33,9 @@ class Card {
     // constructor
     // -----------
     
-    init (s : String, v : String, url : String) {
+    init (s : String, v : String) {
         self.suit  = s
         self.value = v
-        self.img   = UIImage(named : url)
+        self.img   = UIImage(named : name + ".png")
     }
 }
