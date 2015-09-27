@@ -98,11 +98,13 @@ class MyTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
         if (segue.identifier == "collectionSegue") {
             if let destination = segue.destinationViewController as? MyCollectionViewController {
+                let index : Int = self.tableView!.indexPathForSelectedRow()!.row
+                let suit : String = suits[index]
                 destination.cards = [
-                    Card(s: "Aces", v: "King"),
-                    Card(s: "Hearts", v: "Queen"),
-                    Card(s: "Hearts", v: "Ace"),
-                    Card(s: "Hearts", v: "Jack")
+                    Card(s: suit, v: "Ace"),
+                    Card(s: suit, v: "King"),
+                    Card(s: suit, v: "Queen"),
+                    Card(s: suit, v: "Jack")
                 ]
             }
         }
