@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import UIKit
 
 // ----
 // card
@@ -19,13 +18,18 @@ class Card {
     // data members
     // ------------
     
-    private var img : UIImage!
     private var suit :  String = ""
     private var value : String = ""
     
-    private var name :  String {
+    var name :  String {
         get {
-            return suit + " " + value
+            return value + " " + suit
+        }
+    }
+    
+    var img : String {
+        get {
+            return suit + value + ".png"
         }
     }
     
@@ -36,6 +40,5 @@ class Card {
     init (s : String, v : String) {
         self.suit  = s
         self.value = v
-        self.img   = UIImage(named : suit + value + ".png")
     }
 }

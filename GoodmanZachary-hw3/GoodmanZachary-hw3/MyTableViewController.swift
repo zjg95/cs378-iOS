@@ -99,7 +99,7 @@ class MyTableViewController: UITableViewController {
         if (segue.identifier == "collectionSegue") {
             if let destination = segue.destinationViewController as? MyCollectionViewController {
                 destination.cards = [
-                    Card(s: "Hearts", v: "King"),
+                    Card(s: "Aces", v: "King"),
                     Card(s: "Hearts", v: "Queen"),
                     Card(s: "Hearts", v: "Ace"),
                     Card(s: "Hearts", v: "Jack")

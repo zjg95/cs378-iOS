@@ -57,8 +57,14 @@ class MyCollectionViewController: UICollectionViewController {
     }
 
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! UICollectionViewCell
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! MyCollectionViewCell
         // Configure the cell
+        
+        let name : String = cards[indexPath.item].name
+        let imgPath  : String = cards[indexPath.item].img
+        
+        cell.cellLabel.text = name
+        cell.cellImage.image = UIImage(named: imgPath)
     
         return cell
     }

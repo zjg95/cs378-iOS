@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8EA8DF4C1BB7624100133E43 /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA8DF4B1BB7624100133E43 /* MyCollectionViewCell.swift */; };
 		8EAD7A671BB5C64A007C8E2F /* MyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAD7A661BB5C64A007C8E2F /* MyTableViewController.swift */; };
 		8EAD7A691BB5C848007C8E2F /* MyCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAD7A681BB5C848007C8E2F /* MyCollectionViewController.swift */; };
 		8EAD7A7B1BB5C8B2007C8E2F /* ClubsAce.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EAD7A6B1BB5C8B2007C8E2F /* ClubsAce.png */; };
@@ -45,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8EA8DF4B1BB7624100133E43 /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
 		8EAD7A661BB5C64A007C8E2F /* MyTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTableViewController.swift; sourceTree = "<group>"; };
 		8EAD7A681BB5C848007C8E2F /* MyCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCollectionViewController.swift; sourceTree = "<group>"; };
 		8EAD7A6B1BB5C8B2007C8E2F /* ClubsAce.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ClubsAce.png; sourceTree = "<group>"; };
@@ -94,7 +96,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8EAD7A6A1BB5C8B2007C8E2F /* images */ = {
+		8EA8DF4E1BB76B1C00133E43 /* images */ = {
 			isa = PBXGroup;
 			children = (
 				8EAD7A6B1BB5C8B2007C8E2F /* ClubsAce.png */,
@@ -115,8 +117,8 @@
 				8EAD7A7A1BB5C8B2007C8E2F /* SpadesQueen.png */,
 			);
 			name = images;
-			path = "CS378-Homework3-cardImages";
-			sourceTree = SOURCE_ROOT;
+			path = "../CS378-Homework3-cardImages";
+			sourceTree = "<group>";
 		};
 		8ECCACE71BB4A67900B868A1 = {
 			isa = PBXGroup;
@@ -139,11 +141,12 @@
 		8ECCACF21BB4A67A00B868A1 /* GoodmanZachary-hw3 */ = {
 			isa = PBXGroup;
 			children = (
+				8EA8DF4B1BB7624100133E43 /* MyCollectionViewCell.swift */,
 				8ECCACF51BB4A67A00B868A1 /* AppDelegate.swift */,
 				8ECCACF71BB4A67A00B868A1 /* ViewController.swift */,
 				8ECCACF91BB4A67A00B868A1 /* Main.storyboard */,
 				8EAD7A8B1BB5D0B8007C8E2F /* Card.swift */,
-				8EAD7A6A1BB5C8B2007C8E2F /* images */,
+				8EA8DF4E1BB76B1C00133E43 /* images */,
 				8EAD7A681BB5C848007C8E2F /* MyCollectionViewController.swift */,
 				8EAD7A661BB5C64A007C8E2F /* MyTableViewController.swift */,
 				8ECCACFC1BB4A67A00B868A1 /* Images.xcassets */,
@@ -296,6 +299,7 @@
 			files = (
 				8EAD7A691BB5C848007C8E2F /* MyCollectionViewController.swift in Sources */,
 				8ECCACF81BB4A67A00B868A1 /* ViewController.swift in Sources */,
+				8EA8DF4C1BB7624100133E43 /* MyCollectionViewCell.swift in Sources */,
 				8EAD7A8C1BB5D0B8007C8E2F /* Card.swift in Sources */,
 				8EAD7A671BB5C64A007C8E2F /* MyTableViewController.swift in Sources */,
 				8ECCACF61BB4A67A00B868A1 /* AppDelegate.swift in Sources */,
