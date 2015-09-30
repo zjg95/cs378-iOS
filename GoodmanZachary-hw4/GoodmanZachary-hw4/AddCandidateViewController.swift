@@ -14,9 +14,7 @@ class AddCandidateViewController: UIViewController, UITextFieldDelegate {
     // data members
     // ------------
     
-    var candidateList = [
-        Candidate(firstName: "null", lastName: "null", state: "null", party: "null", votes: 0)
-    ]
+    var candidateList : NSMutableArray!
     
     // ------------
     // data outlets
@@ -35,7 +33,7 @@ class AddCandidateViewController: UIViewController, UITextFieldDelegate {
     @IBAction func saveButton(sender: AnyObject) {
         dismissKeyboard()
         let candidate : Candidate = Candidate(firstName: firstNameField.text!, lastName: lastNameField.text!, state: stateField.text!, party: "party", votes: 0)
-        candidateList.append(candidate)
+        candidateList.addObject(candidate)
         saveLabel.text = "Candidate Saved!"
     }
     
@@ -77,13 +75,19 @@ class AddCandidateViewController: UIViewController, UITextFieldDelegate {
     }
     
 
-    /*
     // MARK: - Navigation
-
+    /*
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        print("returning")
+        if (segue.identifier == "addCandidateSegue") {
+            print("passing through add candidate segue")
+            if let destination = segue.destinationViewController as? CandidateManagerViewController {
+                destination.candidateList = self.candidateList
+            }
+        }
     }
     */
 

@@ -10,9 +10,7 @@ import UIKit
 
 class CandidateManagerViewController: UIViewController {
 
-    var candidateList = [
-        Candidate(firstName: "null", lastName: "null", state: "null", party: "null", votes: 0)
-    ]
+    var candidateList : NSMutableArray = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,8 +29,13 @@ class CandidateManagerViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        if (segue.identifier == "collectionSegue") {
+        if (segue.identifier == "addCandidateSegue") {
             if let destination = segue.destinationViewController as? AddCandidateViewController {
+                destination.candidateList = self.candidateList
+            }
+        }
+        if (segue.identifier == "showCandidateSegue") {
+            if let destination = segue.destinationViewController as? CandidateTableViewController {
                 destination.candidateList = self.candidateList
             }
         }

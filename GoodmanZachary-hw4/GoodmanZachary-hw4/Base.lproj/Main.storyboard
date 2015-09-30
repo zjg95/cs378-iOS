@@ -8,7 +8,7 @@
         <!--Candidate Manager-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="Candidate Manager" id="BYZ-38-t0r" customClass="ViewController" customModule="GoodmanZachary_hw4" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Candidate Manager" id="BYZ-38-t0r" customClass="CandidateManagerViewController" customModule="GoodmanZachary_hw4" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -21,14 +21,14 @@
                                 <rect key="frame" x="85" y="195" width="205" height="30"/>
                                 <state key="normal" title="Add candidate"/>
                                 <connections>
-                                    <segue destination="Yju-jZ-EDe" kind="show" id="Uth-Go-lIc"/>
+                                    <segue destination="Yju-jZ-EDe" kind="show" identifier="addCandidateSegue" id="Uth-Go-lIc"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DM4-LQ-z29">
                                 <rect key="frame" x="85" y="252" width="205" height="30"/>
                                 <state key="normal" title="Show candidates"/>
                                 <connections>
-                                    <segue destination="IhA-EU-OZB" kind="show" id="29K-iU-Inj"/>
+                                    <segue destination="IhA-EU-OZB" kind="show" identifier="showCandidateSegue" id="29K-iU-Inj"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H2z-9a-sZW">
@@ -137,7 +137,7 @@
         <!--Show Candidates-->
         <scene sceneID="cth-qm-3nc">
             <objects>
-                <tableViewController title="Show Candidates" id="IhA-EU-OZB" sceneMemberID="viewController">
+                <tableViewController title="Show Candidates" id="IhA-EU-OZB" customClass="CandidateTableViewController" customModule="GoodmanZachary_hw4" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="mOl-wg-VOo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
