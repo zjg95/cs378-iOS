@@ -167,7 +167,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="qAo-jv-otn" kind="show" id="XmE-qP-FbG"/>
+                                    <segue destination="qAo-jv-otn" kind="show" identifier="candidateDetailSegue" id="XmE-qP-FbG"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -184,7 +184,7 @@
         <!--Candidate Details-->
         <scene sceneID="1ca-s1-Mvi">
             <objects>
-                <viewController title="Candidate Details" id="qAo-jv-otn" userLabel="Candidate Details" sceneMemberID="viewController">
+                <viewController title="Candidate Details" id="qAo-jv-otn" userLabel="Candidate Details" customClass="CandidateDetailViewController" customModule="GoodmanZachary_hw4" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ikb-MB-5z8"/>
                         <viewControllerLayoutGuide type="bottom" id="Ny9-qh-Svb"/>
@@ -256,6 +256,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="firstNameLabel" destination="XCt-I0-dGO" id="LaI-5q-8MG"/>
+                        <outlet property="lastNameLabel" destination="73z-aC-6d7" id="dST-tX-UsE"/>
+                        <outlet property="partyLabel" destination="SE8-vX-SI1" id="4QL-a9-TNz"/>
+                        <outlet property="stateLabel" destination="Yn2-g6-cZ0" id="n9e-Io-HXe"/>
+                        <outlet property="votesLabel" destination="Jrh-uY-4dg" id="gAS-MV-foz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QQk-Ps-dBE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

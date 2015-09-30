@@ -14,7 +14,7 @@ class CandidateTableViewController: UITableViewController {
     // data members
     // ------------
     
-    var candidateList : NSMutableArray!
+    var candidateList : NSArray!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,7 +47,9 @@ class CandidateTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
 
         // Configure the cell...
-        cell.textLabel?.text = "test"
+        let candidate : Candidate = candidateList[indexPath.item] as! Candidate
+        cell.textLabel?.text = candidate.firstName + " " + candidate.lastName
+        cell.detailTextLabel?.text = candidate.party
 
         return cell
     }
@@ -87,14 +89,18 @@ class CandidateTableViewController: UITableViewController {
     }
     */
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if (segue.identifier == "candidateDetailSegue") {
+            if let destination = segue.destinationViewController as? CandidateDetailViewController {
+                let index : Int = self.tableView!.indexPathForSelectedRow!.row
+                destination.candidate = candidateList[index] as! Candidate
+            }
+        }
     }
-    */
 
 }

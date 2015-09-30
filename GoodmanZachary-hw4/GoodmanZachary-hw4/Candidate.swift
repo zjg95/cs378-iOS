@@ -18,22 +18,57 @@ class Candidate {
     // data members
     // ------------
     
-    private var firstName : String = ""
-    private var lastName  : String = ""
-    private var state     : String = ""
-    private var party     : String = ""
-    private var votes     : Int = 0
+    private var firstName_ : String = ""
+    private var lastName_  : String = ""
+    private var state_     : String = ""
+    private var party_     : String = ""
+    private var votes_     : Int = 0
+    
+    // ---------
+    // accessors
+    // ---------
+    
+    var firstName : String {
+        get {
+            return firstName_
+        }
+    }
+    
+    var lastName : String {
+        get {
+            return lastName_
+        }
+    }
+    
+    var state : String {
+        get {
+            return state_
+        }
+    }
+    
+    var party : String {
+        get {
+            return party_
+        }
+    }
+    
+    var votes : Int {
+        get {
+            return votes_
+        }
+    }
     
     // -----------
     // constructor
     // -----------
     
     init (firstName : String, lastName : String, state : String, party : String, votes : Int) {
-        self.firstName = firstName
-        self.lastName  = lastName
-        self.state     = state
-        self.party     = party
-        self.votes     = votes
+        self.firstName_ = firstName
+        self.lastName_  = lastName
+        self.state_     = state
+        self.party_     = party
+        self.votes_     = votes
         
     }
+    
 }
