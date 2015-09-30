@@ -32,7 +32,16 @@ class AddCandidateViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func saveButton(sender: AnyObject) {
         dismissKeyboard()
-        let candidate : Candidate = Candidate(firstName: firstNameField.text!, lastName: lastNameField.text!, state: stateField.text!, party: "party", votes: 0)
+        var party : String!
+        switch partySegment.selectedSegmentIndex {
+        case 0:
+            party = "Democrat"
+        case 1:
+            party = "Republican"
+        default:
+            party = "Error"
+        }
+        let candidate : Candidate = Candidate(firstName: firstNameField.text!, lastName: lastNameField.text!, state: stateField.text!, party: party, votes: 0)
         candidateList.addObject(candidate)
         saveLabel.text = "Candidate Saved!"
     }
