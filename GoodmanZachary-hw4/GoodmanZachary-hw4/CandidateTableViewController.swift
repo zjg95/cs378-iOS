@@ -14,7 +14,7 @@ class CandidateTableViewController: UITableViewController {
     // data members
     // ------------
     
-    var candidateList : NSArray!
+    var candidateList : NSMutableArray!
 
     override func viewDidLoad() {
         super.viewDidLoad()

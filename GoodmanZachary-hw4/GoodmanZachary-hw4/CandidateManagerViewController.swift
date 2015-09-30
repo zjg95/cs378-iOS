@@ -10,7 +10,9 @@ import UIKit
 
 class CandidateManagerViewController: UIViewController {
 
-    var candidateList : NSMutableArray = []
+    var candidateList : NSMutableArray = [
+        Candidate(firstName: "null", lastName: "null", state: "null", party: "null", votes: 0)
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
