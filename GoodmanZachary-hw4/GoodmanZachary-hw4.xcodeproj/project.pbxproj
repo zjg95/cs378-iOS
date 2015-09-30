@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8E8E5AF61BBB452700F6DEFC /* Candidate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8E5AF51BBB452700F6DEFC /* Candidate.swift */; settings = {ASSET_TAGS = (); }; };
 		8E97F1C91BBBAD3300C39BB9 /* AddCandidateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E97F1C81BBBAD3300C39BB9 /* AddCandidateViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		8E97F1CB1BBBB2F000C39BB9 /* CandidateManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E97F1CA1BBBB2F000C39BB9 /* CandidateManagerViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		8EFF91461BBAF87B009DBF40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFF91451BBAF87B009DBF40 /* AppDelegate.swift */; };
 		8EFF91481BBAF87B009DBF40 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFF91471BBAF87B009DBF40 /* ViewController.swift */; };
 		8EFF914B1BBAF87B009DBF40 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EFF91491BBAF87B009DBF40 /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 /* Begin PBXFileReference section */
 		8E8E5AF51BBB452700F6DEFC /* Candidate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Candidate.swift; sourceTree = "<group>"; };
 		8E97F1C81BBBAD3300C39BB9 /* AddCandidateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCandidateViewController.swift; sourceTree = "<group>"; };
+		8E97F1CA1BBBB2F000C39BB9 /* CandidateManagerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CandidateManagerViewController.swift; sourceTree = "<group>"; };
 		8EFF91421BBAF87B009DBF40 /* GoodmanZachary-hw4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GoodmanZachary-hw4.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EFF91451BBAF87B009DBF40 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8EFF91471BBAF87B009DBF40 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 				8EFF91451BBAF87B009DBF40 /* AppDelegate.swift */,
 				8EFF91471BBAF87B009DBF40 /* ViewController.swift */,
 				8EFF91491BBAF87B009DBF40 /* Main.storyboard */,
+				8E97F1CA1BBBB2F000C39BB9 /* CandidateManagerViewController.swift */,
 				8E97F1C81BBBAD3300C39BB9 /* AddCandidateViewController.swift */,
 				8E8E5AF51BBB452700F6DEFC /* Candidate.swift */,
 				8EFF914C1BBAF87B009DBF40 /* Assets.xcassets */,
@@ -264,6 +267,7 @@
 			files = (
 				8E97F1C91BBBAD3300C39BB9 /* AddCandidateViewController.swift in Sources */,
 				8E8E5AF61BBB452700F6DEFC /* Candidate.swift in Sources */,
+				8E97F1CB1BBBB2F000C39BB9 /* CandidateManagerViewController.swift in Sources */,
 				8EFF91481BBAF87B009DBF40 /* ViewController.swift in Sources */,
 				8EFF91461BBAF87B009DBF40 /* AppDelegate.swift in Sources */,
 			);

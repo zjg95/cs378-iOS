@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Candidate Manager-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GoodmanZachary_hw4" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Candidate Manager" id="BYZ-38-t0r" customClass="ViewController" customModule="GoodmanZachary_hw4" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -51,7 +51,7 @@
         <!--Add Candidate-->
         <scene sceneID="I4O-By-DrX">
             <objects>
-                <viewController title="addCandidate" id="Yju-jZ-EDe" userLabel="Add Candidate" customClass="AddCandidateViewController" customModule="GoodmanZachary_hw4" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Add Candidate" id="Yju-jZ-EDe" userLabel="Add Candidate" customClass="AddCandidateViewController" customModule="GoodmanZachary_hw4" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jr0-UF-SQx"/>
                         <viewControllerLayoutGuide type="bottom" id="OG8-Tw-Fkx"/>
@@ -134,10 +134,10 @@
             </objects>
             <point key="canvasLocation" x="1825.5" y="-108.5"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Show Candidates-->
         <scene sceneID="cth-qm-3nc">
             <objects>
-                <tableViewController id="IhA-EU-OZB" sceneMemberID="viewController">
+                <tableViewController title="Show Candidates" id="IhA-EU-OZB" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="mOl-wg-VOo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -184,7 +184,7 @@
         <!--Candidate Details-->
         <scene sceneID="1ca-s1-Mvi">
             <objects>
-                <viewController id="qAo-jv-otn" userLabel="Candidate Details" sceneMemberID="viewController">
+                <viewController title="Candidate Details" id="qAo-jv-otn" userLabel="Candidate Details" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ikb-MB-5z8"/>
                         <viewControllerLayoutGuide type="bottom" id="Ny9-qh-Svb"/>

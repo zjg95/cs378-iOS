@@ -11,6 +11,14 @@ import UIKit
 class AddCandidateViewController: UIViewController, UITextFieldDelegate {
     
     // ------------
+    // data members
+    // ------------
+    
+    var candidateList = [
+        Candidate(firstName: "null", lastName: "null", state: "null", party: "null", votes: 0)
+    ]
+    
+    // ------------
     // data outlets
     // ------------
 
@@ -26,6 +34,8 @@ class AddCandidateViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func saveButton(sender: AnyObject) {
         dismissKeyboard()
+        let candidate : Candidate = Candidate(firstName: firstNameField.text!, lastName: lastNameField.text!, state: stateField.text!, party: "party", votes: 0)
+        candidateList.append(candidate)
         saveLabel.text = "Candidate Saved!"
     }
     
