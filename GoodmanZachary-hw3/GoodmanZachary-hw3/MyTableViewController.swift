@@ -46,7 +46,7 @@ class MyTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) 
 
         // Configure the cell...
         let value : String = suits[indexPath.item]
@@ -98,7 +98,7 @@ class MyTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
         if (segue.identifier == "collectionSegue") {
             if let destination = segue.destinationViewController as? MyCollectionViewController {
-                let index : Int = self.tableView!.indexPathForSelectedRow()!.row
+                let index : Int = self.tableView!.indexPathForSelectedRow!.row
                 let suit : String = suits[index]
                 destination.cards = [
                     Card(s: suit, v: "Ace"),
