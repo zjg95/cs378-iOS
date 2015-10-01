@@ -10,9 +10,7 @@ import UIKit
 
 class CandidateManagerViewController: UIViewController {
     
-    var candidateList : NSMutableArray = [
-        Candidate(firstName: "Donald", lastName: "Trump", state: "Texas", party: "Republican", votes: 0)
-    ]
+    var candidateList : NSMutableArray = []
 
     @IBOutlet weak var voteButton: UIButton!
     
