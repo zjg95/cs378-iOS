@@ -34,15 +34,25 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H2z-9a-sZW">
                                 <rect key="frame" x="164" y="309" width="46" height="30"/>
                                 <state key="normal" title="Vote"/>
+                                <connections>
+                                    <action selector="voteButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UfP-io-Md8"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="POX-ck-2y9">
                                 <rect key="frame" x="90" y="365" width="194" height="30"/>
                                 <state key="normal" title="Show Votes"/>
+                                <connections>
+                                    <action selector="showVotesButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gKm-Ni-9vm"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="Jcf-qa-cHY"/>
+                    <connections>
+                        <outlet property="showVotesButton" destination="POX-ck-2y9" id="U6Y-Bc-KWN"/>
+                        <outlet property="voteButton" destination="H2z-9a-sZW" id="Emg-UZ-nTp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

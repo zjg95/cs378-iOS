@@ -56,6 +56,9 @@ class Candidate {
         get {
             return votes_
         }
+        set (newValue) {
+            votes_ = newValue
+        }
     }
     
     // -----------

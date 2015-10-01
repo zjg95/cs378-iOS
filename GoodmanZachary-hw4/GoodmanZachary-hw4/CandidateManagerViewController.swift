@@ -9,10 +9,25 @@
 import UIKit
 
 class CandidateManagerViewController: UIViewController {
-
+    
     var candidateList : NSMutableArray = [
         Candidate(firstName: "Donald", lastName: "Trump", state: "Texas", party: "Republican", votes: 0)
     ]
+
+    @IBOutlet weak var voteButton: UIButton!
+    
+    @IBOutlet weak var showVotesButton: UIButton!
+    
+    @IBAction func voteButton(sender: AnyObject) {
+        print("vote pressed")
+    }
+    
+    @IBAction func showVotesButton(sender: AnyObject) {
+        let popOverController = MyPopoverViewController(type: "Votes", candidateList: self.candidateList)
+        
+        popOverController.presentPopover(sourceController: self, sourceView: self.showVotesButton, sourceRect: self.showVotesButton.bounds)
+        print("showVotes pressed")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
