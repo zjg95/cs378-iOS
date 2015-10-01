@@ -19,6 +19,9 @@ class CandidateManagerViewController: UIViewController {
     @IBOutlet weak var showVotesButton: UIButton!
     
     @IBAction func voteButton(sender: AnyObject) {
+        let popOverController = MyPopoverViewController(type: "Vote", candidateList: self.candidateList)
+        
+        popOverController.presentPopover(sourceController: self, sourceView: self.voteButton, sourceRect: self.showVotesButton.bounds)
         print("vote pressed")
     }
     

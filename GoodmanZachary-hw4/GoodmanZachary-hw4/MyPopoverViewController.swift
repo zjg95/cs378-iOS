@@ -36,8 +36,8 @@ class MyPopoverViewController: UIViewController, UIPopoverPresentationController
         
         // Create the view controller we want to display as the popup.
         
-        self.voteTable = VoteTableViewController(title: self.type, preferredContentSize: CGSize(width: 200, height: 180))
-        self.showVoteTable = ShowVoteTableViewController(title: self.type, preferredContentSize: CGSize(width: 200, height: 180))
+        self.voteTable = VoteTableViewController(title: self.type, preferredContentSize: CGSize(width: 250, height: 180))
+        self.showVoteTable = ShowVoteTableViewController(title: self.type, preferredContentSize: CGSize(width: 250, height: 180))
         
         self.voteTable.candidateList = self.candidateList
         self.showVoteTable.candidateList = self.candidateList
