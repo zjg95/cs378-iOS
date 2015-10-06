@@ -85,7 +85,6 @@ class CandidateManagerViewController: UIViewController {
         if (segue.identifier == "showCandidateSegue") {
             if let destination = segue.destinationViewController as? CandidateTableViewController {
                 destination.candidateList = self.candidateList
-                destination.people = self.people
             }
         }
     }

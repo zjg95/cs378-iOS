@@ -16,7 +16,6 @@ class CandidateTableViewController: UITableViewController {
     // ------------
     
     var candidateList : NSArray!
-    var people : [NSManagedObject]!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,11 +51,6 @@ class CandidateTableViewController: UITableViewController {
         let candidate = candidateList[indexPath.item] as! NSManagedObject
         cell.textLabel?.text = String(candidate.valueForKey("firstName") as! String) + " " + String(candidate.valueForKey("lastName") as! String)
         cell.detailTextLabel?.text = candidate.valueForKey("party") as? String
-        
-//        let person = people[indexPath.row]
-//        
-//        cell.textLabel!.text = person.valueForKey("firstName") as? String
-//        cell.detailTextLabel!.text = person.valueForKey("party") as? String
 
         return cell
     }

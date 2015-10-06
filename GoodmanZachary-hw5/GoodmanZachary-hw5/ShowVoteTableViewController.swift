@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class ShowVoteTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -60,9 +61,9 @@ class ShowVoteTableViewController: UIViewController, UITableViewDataSource, UITa
         //        let index:Int = indexPath.row
         
         //        let filter:FilterItem = self.data.getFilterItem(index: index)
-        let filter:Candidate = self.candidateList[indexPath.item] as! Candidate
+        let filter = self.candidateList[indexPath.item] as! NSManagedObject
         
-        cell.textLabel?.text = filter.firstName + " " + filter.lastName + " Votes: " + String(filter.votes)
+        cell.textLabel?.text = (filter.valueForKey("firstName") as? String)! + " " + (filter.valueForKey("lastName") as? String)! + " Votes: " + String((filter.valueForKey("numVotes") as? Int)!)
         
         return cell
     }
@@ -70,9 +71,6 @@ class ShowVoteTableViewController: UIViewController, UITableViewDataSource, UITa
     // MARK: - Table view delegate
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let candidate:Candidate = self.candidateList[indexPath.item] as! Candidate
-        
-        print("You selected cell #\(indexPath.row), title: \(candidate.firstName) \(candidate.lastName)")
         
         self.dismissViewControllerAnimated(true, completion: nil)
     }

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class VoteTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -57,24 +58,25 @@ class VoteTableViewController: UIViewController, UITableViewDataSource, UITableV
         let cell = tableView.dequeueReusableCellWithIdentifier(self.cellId, forIndexPath: indexPath)
         
         // Configure the cell...
-        //        let index:Int = indexPath.row
         
-        //        let filter:FilterItem = self.data.getFilterItem(index: index)
-        let filter:Candidate = self.candidateList[indexPath.item] as! Candidate
+        let filter = self.candidateList[indexPath.item] as! NSManagedObject
         
-        cell.textLabel?.text = filter.firstName + " " + filter.lastName
+        cell.textLabel?.text = (filter.valueForKey("firstName") as? String)! + " " + (filter.valueForKey("lastName") as? String)!
         
         return cell
+        
     }
     
     // MARK: - Table view delegate
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let candidate:Candidate = self.candidateList[indexPath.item] as! Candidate
+        let candidate = self.candidateList[indexPath.item] as! NSManagedObject
         
-        candidate.votes = candidate.votes + 1
+        let votes : Int = (candidate.valueForKey("numVotes") as? Int)! + 1
         
-        print("You selected cell #\(indexPath.row), title: \(candidate.firstName) \(candidate.lastName)")
+        candidate.setValue(votes, forKey: "numVotes")
+        
+//        print("You selected cell #\(indexPath.row), title: \(candidate.firstName) \(candidate.lastName)")
         
         self.dismissViewControllerAnimated(true, completion: nil)
     }
