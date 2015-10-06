@@ -105,7 +105,7 @@ class CandidateTableViewController: UITableViewController {
         if (segue.identifier == "candidateDetailSegue") {
             if let destination = segue.destinationViewController as? CandidateDetailViewController {
                 let index : Int = self.tableView!.indexPathForSelectedRow!.row
-                destination.candidate = candidateList[index] as! Candidate
+                destination.candidate = candidateList[index] as! NSManagedObject
             }
         }
     }

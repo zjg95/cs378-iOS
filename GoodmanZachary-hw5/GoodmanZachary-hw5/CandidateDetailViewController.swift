@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class CandidateDetailViewController: UIViewController {
 
@@ -14,7 +15,7 @@ class CandidateDetailViewController: UIViewController {
     // data members
     // ------------
     
-    var candidate : Candidate!
+    var candidate : NSManagedObject!
     
     // ------------
     // data members
@@ -30,11 +31,16 @@ class CandidateDetailViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        firstNameLabel.text = candidate.firstName
-        lastNameLabel.text = candidate.lastName
-        stateLabel.text = candidate.state
-        partyLabel.text = candidate.party
-        votesLabel.text = String(candidate.votes)
+//        firstNameLabel.text = candidate.firstName
+        firstNameLabel.text = candidate.valueForKey("firstName") as? String
+//        lastNameLabel.text = candidate.lastName
+        lastNameLabel.text = candidate.valueForKey("lastName") as? String
+//        stateLabel.text = candidate.state
+        stateLabel.text = candidate.valueForKey("state") as? String
+//        partyLabel.text = candidate.party
+        partyLabel.text = candidate.valueForKey("party") as? String
+//        votesLabel.text = String(candidate.votes)
+        votesLabel.text = String((candidate.valueForKey("numVotes") as? Int)!)
     }
 
     override func didReceiveMemoryWarning() {
