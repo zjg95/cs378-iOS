@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class AddCandidateViewController: UIViewController, UITextFieldDelegate {
     
@@ -15,6 +16,7 @@ class AddCandidateViewController: UIViewController, UITextFieldDelegate {
     // ------------
     
     var candidateList : NSMutableArray!
+    var people : [NSManagedObject]!
     
     // ------------
     // data outlets
@@ -42,8 +44,35 @@ class AddCandidateViewController: UIViewController, UITextFieldDelegate {
             party = "Error"
         }
         let candidate : Candidate = Candidate(firstName: firstNameField.text!, lastName: lastNameField.text!, state: stateField.text!, party: party, votes: 0)
-        candidateList.addObject(candidate)
+//        candidateList.addObject(candidate)
+        savePerson(candidate)
         saveLabel.text = "Candidate Saved!"
+    }
+    
+    func savePerson(candidate : Candidate) {
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let managedContext = appDelegate.managedObjectContext
+        // Create the entity we want to save
+        let entity =  NSEntityDescription.entityForName("Person", inManagedObjectContext: managedContext)
+        let person = NSManagedObject(entity: entity!, insertIntoManagedObjectContext:managedContext)
+        // Set the attribute values
+        person.setValue(candidate.firstName, forKey: "firstName")
+        person.setValue(candidate.lastName, forKey: "lastName")
+        person.setValue(candidate.state, forKey: "state")
+        person.setValue(candidate.party, forKey: "party")
+        person.setValue(0, forKey: "numVotes")
+        // Commit the changes.
+        do {
+            try managedContext.save()
+        } catch {
+            // what to do if an error occurs?
+            let nserror = error as NSError
+            NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
+            abort()
+        }
+        // Add the new entity to our array of managed objects
+        people.append(person)
+        candidateList.addObject(person)
     }
     
     // ---------------------

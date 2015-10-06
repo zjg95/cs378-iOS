@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class CandidateTableViewController: UITableViewController {
     
@@ -15,6 +16,7 @@ class CandidateTableViewController: UITableViewController {
     // ------------
     
     var candidateList : NSArray!
+    var people : [NSManagedObject]!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,9 +49,14 @@ class CandidateTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
 
         // Configure the cell...
-        let candidate : Candidate = candidateList[indexPath.item] as! Candidate
-        cell.textLabel?.text = candidate.firstName + " " + candidate.lastName
-        cell.detailTextLabel?.text = candidate.party
+        let candidate = candidateList[indexPath.item] as! NSManagedObject
+        cell.textLabel?.text = String(candidate.valueForKey("firstName") as! String) + " " + String(candidate.valueForKey("lastName") as! String)
+        cell.detailTextLabel?.text = candidate.valueForKey("party") as? String
+        
+//        let person = people[indexPath.row]
+//        
+//        cell.textLabel!.text = person.valueForKey("firstName") as? String
+//        cell.detailTextLabel!.text = person.valueForKey("party") as? String
 
         return cell
     }
