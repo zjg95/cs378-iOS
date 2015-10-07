@@ -44,7 +44,6 @@ class AddCandidateViewController: UIViewController, UITextFieldDelegate {
             party = "Error"
         }
         let candidate : Candidate = Candidate(firstName: firstNameField.text!, lastName: lastNameField.text!, state: stateField.text!, party: party, votes: 0)
-//        candidateList.addObject(candidate)
         savePerson(candidate)
         saveLabel.text = "Candidate Saved!"
     }

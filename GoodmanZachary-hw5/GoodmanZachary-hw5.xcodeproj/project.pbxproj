@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E2DBDE51BC4B69300615D7A /* DataModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2DBDE41BC4B69300615D7A /* DataModelProtocol.swift */; settings = {ASSET_TAGS = (); }; };
 		8EA71C881BC33713004F5942 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA71C871BC33713004F5942 /* AppDelegate.swift */; };
 		8EA71C8A1BC33713004F5942 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA71C891BC33713004F5942 /* ViewController.swift */; };
 		8EA71C8D1BC33713004F5942 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EA71C8B1BC33713004F5942 /* Main.storyboard */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8E2DBDE41BC4B69300615D7A /* DataModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModelProtocol.swift; sourceTree = "<group>"; };
 		8EA71C841BC33713004F5942 /* GoodmanZachary-hw5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GoodmanZachary-hw5.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EA71C871BC33713004F5942 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8EA71C891BC33713004F5942 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				8EA71CBC1BC3376D004F5942 /* CandidateManagerViewController.swift */,
 				8EA71CBD1BC3376D004F5942 /* MyPopoverViewController.swift */,
 				8EA71CBE1BC3376D004F5942 /* VoteTableViewController.swift */,
+				8E2DBDE41BC4B69300615D7A /* DataModelProtocol.swift */,
 				8EA71CBF1BC3376D004F5942 /* ShowVoteTableViewController.swift */,
 				8EA71CC01BC3376D004F5942 /* AddCandidateViewController.swift */,
 				8EA71C961BC33713004F5942 /* Info.plist */,
@@ -292,6 +295,7 @@
 				8EA71C8A1BC33713004F5942 /* ViewController.swift in Sources */,
 				8EA71C881BC33713004F5942 /* AppDelegate.swift in Sources */,
 				8EA71CC31BC3376D004F5942 /* CandidateManagerViewController.swift in Sources */,
+				8E2DBDE51BC4B69300615D7A /* DataModelProtocol.swift in Sources */,
 				8EA71CC11BC3376D004F5942 /* CandidateTableViewController.swift in Sources */,
 				8EA71CC61BC3376D004F5942 /* ShowVoteTableViewController.swift in Sources */,
 				8EA71CC71BC3376D004F5942 /* AddCandidateViewController.swift in Sources */,
@@ -522,6 +526,7 @@
 				8EA71CB11BC33713004F5942 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8EA71CB21BC33713004F5942 /* Build configuration list for PBXNativeTarget "GoodmanZachary-hw5Tests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +535,7 @@
 				8EA71CB41BC33713004F5942 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8EA71CB51BC33713004F5942 /* Build configuration list for PBXNativeTarget "GoodmanZachary-hw5UITests" */ = {
 			isa = XCConfigurationList;
@@ -538,6 +544,7 @@
 				8EA71CB71BC33713004F5942 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

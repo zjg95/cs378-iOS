@@ -76,8 +76,6 @@ class VoteTableViewController: UIViewController, UITableViewDataSource, UITableV
         
         candidate.setValue(votes, forKey: "numVotes")
         
-//        print("You selected cell #\(indexPath.row), title: \(candidate.firstName) \(candidate.lastName)")
-        
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
