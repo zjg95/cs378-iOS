@@ -10,6 +10,10 @@ import UIKit
 
 class MyPopoverViewController: UIViewController, UIPopoverPresentationControllerDelegate {
     
+    // ------------
+    // data members
+    // ------------
+    
     var delegate : CandidateManagerViewController!
     
     var type : String!

@@ -16,10 +16,6 @@ class CandidateDetailViewController: UIViewController {
     // ------------
     
     var candidate : NSManagedObject!
-    
-    // ------------
-    // data members
-    // ------------
 
     @IBOutlet weak var firstNameLabel: UILabel!
     @IBOutlet weak var lastNameLabel: UILabel!

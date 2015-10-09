@@ -8,7 +8,15 @@
 
 import Foundation
 
+// -----------------
+// DataModelProtocol
+// -----------------
+
 protocol DataModelProtocol {
+    
+    // ------
+    // notify
+    // ------
     
     func notify (message : String)
     

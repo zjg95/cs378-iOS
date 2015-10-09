@@ -11,6 +11,10 @@ import CoreData
 
 class CandidateManagerViewController: UIViewController {
     
+    // ------------
+    // data members
+    // ------------
+    
     var candidateList : NSMutableArray = []
     var people = [NSManagedObject]()
     
@@ -20,14 +24,21 @@ class CandidateManagerViewController: UIViewController {
     
     @IBOutlet weak var showVotesButton: UIButton!
     
+    // ----
+    // vote
+    // ----
+    
     @IBAction func voteButton(sender: AnyObject) {
         let popOverController = MyPopoverViewController(type: "Vote", candidateList: self.candidateList)
         
         popOverController.delegate = self
         
         popOverController.presentPopover(sourceController: self, sourceView: self.voteButton, sourceRect: self.showVotesButton.bounds)
-        print("vote pressed")
     }
+    
+    // ----------
+    // show votes
+    // ----------
     
     @IBAction func showVotesButton(sender: AnyObject) {
         let popOverController = MyPopoverViewController(type: "Votes", candidateList: self.candidateList)
@@ -35,6 +46,10 @@ class CandidateManagerViewController: UIViewController {
         popOverController.presentPopover(sourceController: self, sourceView: self.showVotesButton, sourceRect: self.showVotesButton.bounds)
         print("showVotes pressed")
     }
+    
+    // --------------
+    // read core data
+    // --------------
     
     func readCoreData () {
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
@@ -61,6 +76,10 @@ class CandidateManagerViewController: UIViewController {
         }
     }
     
+    // --------------
+    // save candidate
+    // --------------
+    
     func saveCandidate (candidate : Candidate) {
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let managedContext = appDelegate.managedObjectContext
@@ -79,9 +98,13 @@ class CandidateManagerViewController: UIViewController {
         people.append(person)
         candidateList.addObject(person)
         if (delegate != nil){
-            delegate!.notify("Data Saved")
+            delegate!.notify("Data has been saved.")
         }
     }
+    
+    // --------------
+    // save core data
+    // --------------
     
     func saveCoreData () {
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
