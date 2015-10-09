@@ -10,6 +10,8 @@ import UIKit
 
 class MyPopoverViewController: UIViewController, UIPopoverPresentationControllerDelegate {
     
+    var delegate : CandidateManagerViewController!
+    
     var type : String!
     var voteTable : VoteTableViewController!
     var showVoteTable : ShowVoteTableViewController!
@@ -71,6 +73,7 @@ class MyPopoverViewController: UIViewController, UIPopoverPresentationController
             sourceController.presentViewController(self.showVoteTable, animated: true, completion: nil)
         }
         else {
+            self.voteTable.delegate = self.delegate
             sourceController.presentViewController(self.voteTable, animated: true, completion: nil)
         }
     }

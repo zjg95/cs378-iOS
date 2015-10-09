@@ -13,6 +13,8 @@ class CandidateManagerViewController: UIViewController {
     
     var candidateList : NSMutableArray = []
     var people = [NSManagedObject]()
+    
+    var delegate : DataModelProtocol?
 
     @IBOutlet weak var voteButton: UIButton!
     
@@ -20,6 +22,8 @@ class CandidateManagerViewController: UIViewController {
     
     @IBAction func voteButton(sender: AnyObject) {
         let popOverController = MyPopoverViewController(type: "Vote", candidateList: self.candidateList)
+        
+        popOverController.delegate = self
         
         popOverController.presentPopover(sourceController: self, sourceView: self.voteButton, sourceRect: self.showVotesButton.bounds)
         print("vote pressed")
@@ -57,6 +61,41 @@ class CandidateManagerViewController: UIViewController {
         }
     }
     
+    func saveCandidate (candidate : Candidate) {
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let managedContext = appDelegate.managedObjectContext
+        // Create the entity we want to save
+        let entity =  NSEntityDescription.entityForName("Person", inManagedObjectContext: managedContext)
+        let person = NSManagedObject(entity: entity!, insertIntoManagedObjectContext:managedContext)
+        // Set the attribute values
+        person.setValue(candidate.firstName, forKey: "firstName")
+        person.setValue(candidate.lastName, forKey: "lastName")
+        person.setValue(candidate.state, forKey: "state")
+        person.setValue(candidate.party, forKey: "party")
+        person.setValue(0, forKey: "numVotes")
+        // Commit the changes.
+        saveCoreData()
+        // Add the new entity to our array of managed objects
+        people.append(person)
+        candidateList.addObject(person)
+        if (delegate != nil){
+            delegate!.notify("Data Saved")
+        }
+    }
+    
+    func saveCoreData () {
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let managedContext = appDelegate.managedObjectContext
+        do {
+            try managedContext.save()
+        } catch {
+            // what to do if an error occurs?
+            let nserror = error as NSError
+            NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
+            abort()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -78,8 +117,8 @@ class CandidateManagerViewController: UIViewController {
         // Pass the selected object to the new view controller.
         if (segue.identifier == "addCandidateSegue") {
             if let destination = segue.destinationViewController as? AddCandidateViewController {
-                destination.candidateList = self.candidateList
-                destination.people = self.people
+                destination.delegate = self
+                self.delegate = destination
             }
         }
         if (segue.identifier == "showCandidateSegue") {

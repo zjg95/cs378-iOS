@@ -9,14 +9,13 @@
 import UIKit
 import CoreData
 
-class AddCandidateViewController: UIViewController, UITextFieldDelegate {
+class AddCandidateViewController: UIViewController, UITextFieldDelegate, DataModelProtocol {
     
     // ------------
     // data members
     // ------------
     
-    var candidateList : NSMutableArray!
-    var people : [NSManagedObject]!
+    var delegate : CandidateManagerViewController!
     
     // ------------
     // data outlets
@@ -44,34 +43,8 @@ class AddCandidateViewController: UIViewController, UITextFieldDelegate {
             party = "Error"
         }
         let candidate : Candidate = Candidate(firstName: firstNameField.text!, lastName: lastNameField.text!, state: stateField.text!, party: party, votes: 0)
-        savePerson(candidate)
+        delegate.saveCandidate(candidate)
         saveLabel.text = "Candidate Saved!"
-    }
-    
-    func savePerson(candidate : Candidate) {
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        let managedContext = appDelegate.managedObjectContext
-        // Create the entity we want to save
-        let entity =  NSEntityDescription.entityForName("Person", inManagedObjectContext: managedContext)
-        let person = NSManagedObject(entity: entity!, insertIntoManagedObjectContext:managedContext)
-        // Set the attribute values
-        person.setValue(candidate.firstName, forKey: "firstName")
-        person.setValue(candidate.lastName, forKey: "lastName")
-        person.setValue(candidate.state, forKey: "state")
-        person.setValue(candidate.party, forKey: "party")
-        person.setValue(0, forKey: "numVotes")
-        // Commit the changes.
-        do {
-            try managedContext.save()
-        } catch {
-            // what to do if an error occurs?
-            let nserror = error as NSError
-            NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
-            abort()
-        }
-        // Add the new entity to our array of managed objects
-        people.append(person)
-        candidateList.addObject(person)
     }
     
     // ---------------------
@@ -92,6 +65,24 @@ class AddCandidateViewController: UIViewController, UITextFieldDelegate {
     func dismissKeyboard(){
         //Causes the view (or one of its embedded text fields) to resign the first responder status.
         view.endEditing(true)
+    }
+    
+    // ------
+    // notify
+    // ------
+    
+    func notify(message: String) {
+        // We dispatch to the main thread because it's UI stuff we want to do and
+        // because we don't know what thread called us.
+        dispatch_async(dispatch_get_main_queue()) {
+            let alertController = UIAlertController(title: "Notification", message: message, preferredStyle: UIAlertControllerStyle.Alert)
+            
+            let OKAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default) { (action:UIAlertAction) in
+            }
+            alertController.addAction(OKAction)
+            
+            self.presentViewController(alertController, animated: true, completion:nil)
+        }
     }
     
     override func viewDidLoad() {
