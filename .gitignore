@@ -1,4 +1,5 @@
 # ignore the following files:
 *.DS_Store
+*xcuserstate
 *xcuserdata/
 *UserInterfaceState.xcuserstate

@@ -46,6 +46,14 @@ class CandidateManagerViewController: UIViewController {
         print("showVotes pressed")
     }
     
+    func saveCandidate (candidate : Candidate) {
+        dataModel.saveCandidate(candidate)
+    }
+    
+    func saveCoreData() {
+        dataModel.saveCoreData()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
