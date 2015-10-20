@@ -16,6 +16,7 @@
 		8E8374841BD5D209005DDFFF /* ShowVoteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E83747B1BD5D209005DDFFF /* ShowVoteTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		8E8374851BD5D209005DDFFF /* AddCandidateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E83747C1BD5D209005DDFFF /* AddCandidateViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		8E8374881BD5D25F005DDFFF /* Candidate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8374871BD5D25F005DDFFF /* Candidate.swift */; settings = {ASSET_TAGS = (); }; };
+		8E83748A1BD5DF2C005DDFFF /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8374891BD5DF2C005DDFFF /* DataModel.swift */; settings = {ASSET_TAGS = (); }; };
 		8EBD00EE1BD5D0010062E0C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBD00ED1BD5D0010062E0C3 /* AppDelegate.swift */; };
 		8EBD00F01BD5D0010062E0C3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBD00EF1BD5D0010062E0C3 /* ViewController.swift */; };
 		8EBD00F31BD5D0010062E0C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EBD00F11BD5D0010062E0C3 /* Main.storyboard */; };
@@ -53,6 +54,7 @@
 		8E83747B1BD5D209005DDFFF /* ShowVoteTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowVoteTableViewController.swift; sourceTree = "<group>"; };
 		8E83747C1BD5D209005DDFFF /* AddCandidateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCandidateViewController.swift; sourceTree = "<group>"; };
 		8E8374871BD5D25F005DDFFF /* Candidate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Candidate.swift; sourceTree = "<group>"; };
+		8E8374891BD5DF2C005DDFFF /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		8EBD00EA1BD5D0010062E0C3 /* GoodmanZachary-hw6.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GoodmanZachary-hw6.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EBD00ED1BD5D0010062E0C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8EBD00EF1BD5D0010062E0C3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				8E8374751BD5D209005DDFFF /* CandidateTableViewController.swift */,
 				8E8374761BD5D209005DDFFF /* CandidateDetailViewController.swift */,
 				8E8374771BD5D209005DDFFF /* CandidateManagerViewController.swift */,
+				8E8374891BD5DF2C005DDFFF /* DataModel.swift */,
 				8E8374781BD5D209005DDFFF /* MyPopoverViewController.swift */,
 				8E8374791BD5D209005DDFFF /* VoteTableViewController.swift */,
 				8E83747A1BD5D209005DDFFF /* DataModelProtocol.swift */,
@@ -294,6 +297,7 @@
 				8E8374881BD5D25F005DDFFF /* Candidate.swift in Sources */,
 				8E8374811BD5D209005DDFFF /* MyPopoverViewController.swift in Sources */,
 				8E8374831BD5D209005DDFFF /* DataModelProtocol.swift in Sources */,
+				8E83748A1BD5DF2C005DDFFF /* DataModel.swift in Sources */,
 				8EBD00F01BD5D0010062E0C3 /* ViewController.swift in Sources */,
 				8E8374821BD5D209005DDFFF /* VoteTableViewController.swift in Sources */,
 				8E83747F1BD5D209005DDFFF /* CandidateDetailViewController.swift in Sources */,

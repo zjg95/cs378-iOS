@@ -15,8 +15,7 @@ class CandidateManagerViewController: UIViewController {
     // data members
     // ------------
     
-    var candidateList : NSMutableArray = []
-    var people = [NSManagedObject]()
+    let dataModel: DataModel = DataModel()
     
     var delegate : DataModelProtocol?
 
@@ -29,7 +28,7 @@ class CandidateManagerViewController: UIViewController {
     // ----
     
     @IBAction func voteButton(sender: AnyObject) {
-        let popOverController = MyPopoverViewController(type: "Vote", candidateList: self.candidateList)
+        let popOverController = MyPopoverViewController(type: "Vote", candidateList: self.dataModel.candidateList)
         
         popOverController.delegate = self
         
@@ -41,90 +40,18 @@ class CandidateManagerViewController: UIViewController {
     // ----------
     
     @IBAction func showVotesButton(sender: AnyObject) {
-        let popOverController = MyPopoverViewController(type: "Votes", candidateList: self.candidateList)
+        let popOverController = MyPopoverViewController(type: "Votes", candidateList: self.dataModel.candidateList)
         
         popOverController.presentPopover(sourceController: self, sourceView: self.showVotesButton, sourceRect: self.showVotesButton.bounds)
         print("showVotes pressed")
-    }
-    
-    // --------------
-    // read core data
-    // --------------
-    
-    func readCoreData () {
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        let managedContext = appDelegate.managedObjectContext
-        //
-        let fetchRequest = NSFetchRequest(entityName:"Person")
-        //
-        var fetchedResults:[NSManagedObject]? = nil
-        do {
-            try fetchedResults = managedContext.executeFetchRequest(fetchRequest) as? [NSManagedObject]
-        } catch {
-            // what to do if an error occurs?
-            let nserror = error as NSError
-            NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
-            abort()
-        }
-        if let results = fetchedResults {
-            people = results
-            for person in people {
-                candidateList.addObject(person)
-            }
-        } else {
-            print("Could not fetch")
-        }
-    }
-    
-    // --------------
-    // save candidate
-    // --------------
-    
-    func saveCandidate (candidate : Candidate) {
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        let managedContext = appDelegate.managedObjectContext
-        // Create the entity we want to save
-        let entity =  NSEntityDescription.entityForName("Person", inManagedObjectContext: managedContext)
-        let person = NSManagedObject(entity: entity!, insertIntoManagedObjectContext:managedContext)
-        // Set the attribute values
-        person.setValue(candidate.firstName, forKey: "firstName")
-        person.setValue(candidate.lastName, forKey: "lastName")
-        person.setValue(candidate.state, forKey: "state")
-        person.setValue(candidate.party, forKey: "party")
-        person.setValue(0, forKey: "numVotes")
-        // Commit the changes.
-        saveCoreData()
-        // Add the new entity to our array of managed objects
-        people.append(person)
-        candidateList.addObject(person)
-        if (delegate != nil){
-            delegate!.notify("Data has been saved.")
-        }
-    }
-    
-    // --------------
-    // save core data
-    // --------------
-    
-    func saveCoreData () {
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        let managedContext = appDelegate.managedObjectContext
-        do {
-            try managedContext.save()
-        } catch {
-            // what to do if an error occurs?
-            let nserror = error as NSError
-            NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
-            abort()
-        }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-            
-        readCoreData()
+        
+        dataModel.readCoreData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -146,7 +73,7 @@ class CandidateManagerViewController: UIViewController {
         }
         if (segue.identifier == "showCandidateSegue") {
             if let destination = segue.destinationViewController as? CandidateTableViewController {
-                destination.candidateList = self.candidateList
+                destination.candidateList = self.dataModel.candidateList
             }
         }
     }
