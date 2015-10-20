@@ -1,0 +1,565 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8E83747E1BD5D209005DDFFF /* CandidateTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8374751BD5D209005DDFFF /* CandidateTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		8E83747F1BD5D209005DDFFF /* CandidateDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8374761BD5D209005DDFFF /* CandidateDetailViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		8E8374801BD5D209005DDFFF /* CandidateManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8374771BD5D209005DDFFF /* CandidateManagerViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		8E8374811BD5D209005DDFFF /* MyPopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8374781BD5D209005DDFFF /* MyPopoverViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		8E8374821BD5D209005DDFFF /* VoteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8374791BD5D209005DDFFF /* VoteTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		8E8374831BD5D209005DDFFF /* DataModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E83747A1BD5D209005DDFFF /* DataModelProtocol.swift */; settings = {ASSET_TAGS = (); }; };
+		8E8374841BD5D209005DDFFF /* ShowVoteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E83747B1BD5D209005DDFFF /* ShowVoteTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		8E8374851BD5D209005DDFFF /* AddCandidateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E83747C1BD5D209005DDFFF /* AddCandidateViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		8E8374881BD5D25F005DDFFF /* Candidate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8374871BD5D25F005DDFFF /* Candidate.swift */; settings = {ASSET_TAGS = (); }; };
+		8EBD00EE1BD5D0010062E0C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBD00ED1BD5D0010062E0C3 /* AppDelegate.swift */; };
+		8EBD00F01BD5D0010062E0C3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBD00EF1BD5D0010062E0C3 /* ViewController.swift */; };
+		8EBD00F31BD5D0010062E0C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EBD00F11BD5D0010062E0C3 /* Main.storyboard */; };
+		8EBD00F61BD5D0010062E0C3 /* GoodmanZachary_hw6.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8EBD00F41BD5D0010062E0C3 /* GoodmanZachary_hw6.xcdatamodeld */; };
+		8EBD00F81BD5D0010062E0C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EBD00F71BD5D0010062E0C3 /* Assets.xcassets */; };
+		8EBD00FB1BD5D0010062E0C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EBD00F91BD5D0010062E0C3 /* LaunchScreen.storyboard */; };
+		8EBD01061BD5D0010062E0C3 /* GoodmanZachary_hw6Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBD01051BD5D0010062E0C3 /* GoodmanZachary_hw6Tests.swift */; };
+		8EBD01111BD5D0010062E0C3 /* GoodmanZachary_hw6UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBD01101BD5D0010062E0C3 /* GoodmanZachary_hw6UITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8EBD01021BD5D0010062E0C3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8EBD00E21BD5D0010062E0C3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8EBD00E91BD5D0010062E0C3;
+			remoteInfo = "GoodmanZachary-hw6";
+		};
+		8EBD010D1BD5D0010062E0C3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8EBD00E21BD5D0010062E0C3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8EBD00E91BD5D0010062E0C3;
+			remoteInfo = "GoodmanZachary-hw6";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8E8374751BD5D209005DDFFF /* CandidateTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CandidateTableViewController.swift; sourceTree = "<group>"; };
+		8E8374761BD5D209005DDFFF /* CandidateDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CandidateDetailViewController.swift; sourceTree = "<group>"; };
+		8E8374771BD5D209005DDFFF /* CandidateManagerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CandidateManagerViewController.swift; sourceTree = "<group>"; };
+		8E8374781BD5D209005DDFFF /* MyPopoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPopoverViewController.swift; sourceTree = "<group>"; };
+		8E8374791BD5D209005DDFFF /* VoteTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoteTableViewController.swift; sourceTree = "<group>"; };
+		8E83747A1BD5D209005DDFFF /* DataModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModelProtocol.swift; sourceTree = "<group>"; };
+		8E83747B1BD5D209005DDFFF /* ShowVoteTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowVoteTableViewController.swift; sourceTree = "<group>"; };
+		8E83747C1BD5D209005DDFFF /* AddCandidateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCandidateViewController.swift; sourceTree = "<group>"; };
+		8E8374871BD5D25F005DDFFF /* Candidate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Candidate.swift; sourceTree = "<group>"; };
+		8EBD00EA1BD5D0010062E0C3 /* GoodmanZachary-hw6.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GoodmanZachary-hw6.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8EBD00ED1BD5D0010062E0C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8EBD00EF1BD5D0010062E0C3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8EBD00F21BD5D0010062E0C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8EBD00F51BD5D0010062E0C3 /* GoodmanZachary_hw6.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GoodmanZachary_hw6.xcdatamodel; sourceTree = "<group>"; };
+		8EBD00F71BD5D0010062E0C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8EBD00FA1BD5D0010062E0C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8EBD00FC1BD5D0010062E0C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8EBD01011BD5D0010062E0C3 /* GoodmanZachary-hw6Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GoodmanZachary-hw6Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8EBD01051BD5D0010062E0C3 /* GoodmanZachary_hw6Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodmanZachary_hw6Tests.swift; sourceTree = "<group>"; };
+		8EBD01071BD5D0010062E0C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8EBD010C1BD5D0010062E0C3 /* GoodmanZachary-hw6UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GoodmanZachary-hw6UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8EBD01101BD5D0010062E0C3 /* GoodmanZachary_hw6UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodmanZachary_hw6UITests.swift; sourceTree = "<group>"; };
+		8EBD01121BD5D0010062E0C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8EBD00E71BD5D0010062E0C3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8EBD00FE1BD5D0010062E0C3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8EBD01091BD5D0010062E0C3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8EBD00E11BD5D0010062E0C3 = {
+			isa = PBXGroup;
+			children = (
+				8EBD00EC1BD5D0010062E0C3 /* GoodmanZachary-hw6 */,
+				8EBD01041BD5D0010062E0C3 /* GoodmanZachary-hw6Tests */,
+				8EBD010F1BD5D0010062E0C3 /* GoodmanZachary-hw6UITests */,
+				8EBD00EB1BD5D0010062E0C3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8EBD00EB1BD5D0010062E0C3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8EBD00EA1BD5D0010062E0C3 /* GoodmanZachary-hw6.app */,
+				8EBD01011BD5D0010062E0C3 /* GoodmanZachary-hw6Tests.xctest */,
+				8EBD010C1BD5D0010062E0C3 /* GoodmanZachary-hw6UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8EBD00EC1BD5D0010062E0C3 /* GoodmanZachary-hw6 */ = {
+			isa = PBXGroup;
+			children = (
+				8EBD00ED1BD5D0010062E0C3 /* AppDelegate.swift */,
+				8EBD00EF1BD5D0010062E0C3 /* ViewController.swift */,
+				8EBD00F11BD5D0010062E0C3 /* Main.storyboard */,
+				8EBD00F71BD5D0010062E0C3 /* Assets.xcassets */,
+				8E8374751BD5D209005DDFFF /* CandidateTableViewController.swift */,
+				8E8374761BD5D209005DDFFF /* CandidateDetailViewController.swift */,
+				8E8374771BD5D209005DDFFF /* CandidateManagerViewController.swift */,
+				8E8374781BD5D209005DDFFF /* MyPopoverViewController.swift */,
+				8E8374791BD5D209005DDFFF /* VoteTableViewController.swift */,
+				8E83747A1BD5D209005DDFFF /* DataModelProtocol.swift */,
+				8E83747B1BD5D209005DDFFF /* ShowVoteTableViewController.swift */,
+				8E83747C1BD5D209005DDFFF /* AddCandidateViewController.swift */,
+				8E8374871BD5D25F005DDFFF /* Candidate.swift */,
+				8EBD00F91BD5D0010062E0C3 /* LaunchScreen.storyboard */,
+				8EBD00FC1BD5D0010062E0C3 /* Info.plist */,
+				8EBD00F41BD5D0010062E0C3 /* GoodmanZachary_hw6.xcdatamodeld */,
+			);
+			path = "GoodmanZachary-hw6";
+			sourceTree = "<group>";
+		};
+		8EBD01041BD5D0010062E0C3 /* GoodmanZachary-hw6Tests */ = {
+			isa = PBXGroup;
+			children = (
+				8EBD01051BD5D0010062E0C3 /* GoodmanZachary_hw6Tests.swift */,
+				8EBD01071BD5D0010062E0C3 /* Info.plist */,
+			);
+			path = "GoodmanZachary-hw6Tests";
+			sourceTree = "<group>";
+		};
+		8EBD010F1BD5D0010062E0C3 /* GoodmanZachary-hw6UITests */ = {
+			isa = PBXGroup;
+			children = (
+				8EBD01101BD5D0010062E0C3 /* GoodmanZachary_hw6UITests.swift */,
+				8EBD01121BD5D0010062E0C3 /* Info.plist */,
+			);
+			path = "GoodmanZachary-hw6UITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8EBD00E91BD5D0010062E0C3 /* GoodmanZachary-hw6 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8EBD01151BD5D0010062E0C3 /* Build configuration list for PBXNativeTarget "GoodmanZachary-hw6" */;
+			buildPhases = (
+				8EBD00E61BD5D0010062E0C3 /* Sources */,
+				8EBD00E71BD5D0010062E0C3 /* Frameworks */,
+				8EBD00E81BD5D0010062E0C3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "GoodmanZachary-hw6";
+			productName = "GoodmanZachary-hw6";
+			productReference = 8EBD00EA1BD5D0010062E0C3 /* GoodmanZachary-hw6.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8EBD01001BD5D0010062E0C3 /* GoodmanZachary-hw6Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8EBD01181BD5D0010062E0C3 /* Build configuration list for PBXNativeTarget "GoodmanZachary-hw6Tests" */;
+			buildPhases = (
+				8EBD00FD1BD5D0010062E0C3 /* Sources */,
+				8EBD00FE1BD5D0010062E0C3 /* Frameworks */,
+				8EBD00FF1BD5D0010062E0C3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8EBD01031BD5D0010062E0C3 /* PBXTargetDependency */,
+			);
+			name = "GoodmanZachary-hw6Tests";
+			productName = "GoodmanZachary-hw6Tests";
+			productReference = 8EBD01011BD5D0010062E0C3 /* GoodmanZachary-hw6Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8EBD010B1BD5D0010062E0C3 /* GoodmanZachary-hw6UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8EBD011B1BD5D0010062E0C3 /* Build configuration list for PBXNativeTarget "GoodmanZachary-hw6UITests" */;
+			buildPhases = (
+				8EBD01081BD5D0010062E0C3 /* Sources */,
+				8EBD01091BD5D0010062E0C3 /* Frameworks */,
+				8EBD010A1BD5D0010062E0C3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8EBD010E1BD5D0010062E0C3 /* PBXTargetDependency */,
+			);
+			name = "GoodmanZachary-hw6UITests";
+			productName = "GoodmanZachary-hw6UITests";
+			productReference = 8EBD010C1BD5D0010062E0C3 /* GoodmanZachary-hw6UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8EBD00E21BD5D0010062E0C3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Zach Goodman";
+				TargetAttributes = {
+					8EBD00E91BD5D0010062E0C3 = {
+						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = 776TH5N8U4;
+					};
+					8EBD01001BD5D0010062E0C3 = {
+						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = 776TH5N8U4;
+						TestTargetID = 8EBD00E91BD5D0010062E0C3;
+					};
+					8EBD010B1BD5D0010062E0C3 = {
+						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = 776TH5N8U4;
+						TestTargetID = 8EBD00E91BD5D0010062E0C3;
+					};
+				};
+			};
+			buildConfigurationList = 8EBD00E51BD5D0010062E0C3 /* Build configuration list for PBXProject "GoodmanZachary-hw6" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8EBD00E11BD5D0010062E0C3;
+			productRefGroup = 8EBD00EB1BD5D0010062E0C3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8EBD00E91BD5D0010062E0C3 /* GoodmanZachary-hw6 */,
+				8EBD01001BD5D0010062E0C3 /* GoodmanZachary-hw6Tests */,
+				8EBD010B1BD5D0010062E0C3 /* GoodmanZachary-hw6UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8EBD00E81BD5D0010062E0C3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8EBD00FB1BD5D0010062E0C3 /* LaunchScreen.storyboard in Resources */,
+				8EBD00F81BD5D0010062E0C3 /* Assets.xcassets in Resources */,
+				8EBD00F31BD5D0010062E0C3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8EBD00FF1BD5D0010062E0C3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8EBD010A1BD5D0010062E0C3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8EBD00E61BD5D0010062E0C3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8EBD00F61BD5D0010062E0C3 /* GoodmanZachary_hw6.xcdatamodeld in Sources */,
+				8E83747E1BD5D209005DDFFF /* CandidateTableViewController.swift in Sources */,
+				8E8374801BD5D209005DDFFF /* CandidateManagerViewController.swift in Sources */,
+				8E8374881BD5D25F005DDFFF /* Candidate.swift in Sources */,
+				8E8374811BD5D209005DDFFF /* MyPopoverViewController.swift in Sources */,
+				8E8374831BD5D209005DDFFF /* DataModelProtocol.swift in Sources */,
+				8EBD00F01BD5D0010062E0C3 /* ViewController.swift in Sources */,
+				8E8374821BD5D209005DDFFF /* VoteTableViewController.swift in Sources */,
+				8E83747F1BD5D209005DDFFF /* CandidateDetailViewController.swift in Sources */,
+				8E8374841BD5D209005DDFFF /* ShowVoteTableViewController.swift in Sources */,
+				8E8374851BD5D209005DDFFF /* AddCandidateViewController.swift in Sources */,
+				8EBD00EE1BD5D0010062E0C3 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8EBD00FD1BD5D0010062E0C3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8EBD01061BD5D0010062E0C3 /* GoodmanZachary_hw6Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8EBD01081BD5D0010062E0C3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8EBD01111BD5D0010062E0C3 /* GoodmanZachary_hw6UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8EBD01031BD5D0010062E0C3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8EBD00E91BD5D0010062E0C3 /* GoodmanZachary-hw6 */;
+			targetProxy = 8EBD01021BD5D0010062E0C3 /* PBXContainerItemProxy */;
+		};
+		8EBD010E1BD5D0010062E0C3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8EBD00E91BD5D0010062E0C3 /* GoodmanZachary-hw6 */;
+			targetProxy = 8EBD010D1BD5D0010062E0C3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8EBD00F11BD5D0010062E0C3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8EBD00F21BD5D0010062E0C3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8EBD00F91BD5D0010062E0C3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8EBD00FA1BD5D0010062E0C3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8EBD01131BD5D0010062E0C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8EBD01141BD5D0010062E0C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8EBD01161BD5D0010062E0C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "GoodmanZachary-hw6/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "cs378.GoodmanZachary-hw6";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		8EBD01171BD5D0010062E0C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "GoodmanZachary-hw6/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "cs378.GoodmanZachary-hw6";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		8EBD01191BD5D0010062E0C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "GoodmanZachary-hw6Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "cs378.GoodmanZachary-hw6Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GoodmanZachary-hw6.app/GoodmanZachary-hw6";
+			};
+			name = Debug;
+		};
+		8EBD011A1BD5D0010062E0C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "GoodmanZachary-hw6Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "cs378.GoodmanZachary-hw6Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GoodmanZachary-hw6.app/GoodmanZachary-hw6";
+			};
+			name = Release;
+		};
+		8EBD011C1BD5D0010062E0C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "GoodmanZachary-hw6UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "cs378.GoodmanZachary-hw6UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "GoodmanZachary-hw6";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		8EBD011D1BD5D0010062E0C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "GoodmanZachary-hw6UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "cs378.GoodmanZachary-hw6UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "GoodmanZachary-hw6";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8EBD00E51BD5D0010062E0C3 /* Build configuration list for PBXProject "GoodmanZachary-hw6" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8EBD01131BD5D0010062E0C3 /* Debug */,
+				8EBD01141BD5D0010062E0C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8EBD01151BD5D0010062E0C3 /* Build configuration list for PBXNativeTarget "GoodmanZachary-hw6" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8EBD01161BD5D0010062E0C3 /* Debug */,
+				8EBD01171BD5D0010062E0C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8EBD01181BD5D0010062E0C3 /* Build configuration list for PBXNativeTarget "GoodmanZachary-hw6Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8EBD01191BD5D0010062E0C3 /* Debug */,
+				8EBD011A1BD5D0010062E0C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8EBD011B1BD5D0010062E0C3 /* Build configuration list for PBXNativeTarget "GoodmanZachary-hw6UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8EBD011C1BD5D0010062E0C3 /* Debug */,
+				8EBD011D1BD5D0010062E0C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8EBD00F41BD5D0010062E0C3 /* GoodmanZachary_hw6.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8EBD00F51BD5D0010062E0C3 /* GoodmanZachary_hw6.xcdatamodel */,
+			);
+			currentVersion = 8EBD00F51BD5D0010062E0C3 /* GoodmanZachary_hw6.xcdatamodel */;
+			path = GoodmanZachary_hw6.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 8EBD00E21BD5D0010062E0C3 /* Project object */;
+}
