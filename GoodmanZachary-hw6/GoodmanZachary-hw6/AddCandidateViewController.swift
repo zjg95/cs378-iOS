@@ -15,6 +15,8 @@ class AddCandidateViewController: UIViewController, UITextFieldDelegate, DataMod
     // ------------
     
     var delegate : CandidateManagerViewController!
+    var myObservedClass: MyObservedClass!
+    var candidate: Candidate!
     
     // ------------
     // data outlets
@@ -41,8 +43,9 @@ class AddCandidateViewController: UIViewController, UITextFieldDelegate, DataMod
         default:
             party = "Error"
         }
-        let candidate : Candidate = Candidate(firstName: firstNameField.text!, lastName: lastNameField.text!, state: stateField.text!, party: party, votes: 0)
-        delegate.saveCandidate(candidate)
+        candidate = Candidate(firstName: firstNameField.text!, lastName: lastNameField.text!, state: stateField.text!, party: party, votes: 0)
+//        delegate.saveCandidate(candidate)
+        myObservedClass.updateProperty("new candidate")
         saveLabel.text = "Candidate Saved!"
     }
     

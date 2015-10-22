@@ -27,7 +27,7 @@ class CandidateManagerViewController: UIViewController {
     
     let dataModel: DataModel = DataModel()
     
-    var delegate: DataModelProtocol?
+    var delegate: AddCandidateViewController!
     
     // -------
     // outlets
@@ -58,7 +58,6 @@ class CandidateManagerViewController: UIViewController {
         let popOverController = MyPopoverViewController(type: "Votes", candidateList: self.dataModel.candidateList)
         
         popOverController.presentPopover(sourceController: self, sourceView: self.showVotesButton, sourceRect: self.showVotesButton.bounds)
-        print("showVotes pressed")
     }
     
     // --------------
@@ -68,7 +67,6 @@ class CandidateManagerViewController: UIViewController {
     func saveCandidate(candidate : Candidate) {
         dataModel.saveCandidate(candidate)
         delegate?.notify("Data has been saved.")
-        print("Candidate added")
     }
     
     // --------------
@@ -77,7 +75,6 @@ class CandidateManagerViewController: UIViewController {
     
     func saveCoreData() {
         dataModel.saveCoreData()
-        print("Core data saved")
     }
     
     deinit {
@@ -93,7 +90,7 @@ class CandidateManagerViewController: UIViewController {
             saveCoreData()
         }
         else if context == &addCandidateContext {
-            saveCandidate(Candidate(firstName: "", lastName: "", state: "", party: "", votes: 0))
+            saveCandidate(delegate.candidate)
         } else {
             // Pass this up the chain.
             super.observeValueForKeyPath(keyPath, ofObject: object, change: change, context: context)
@@ -126,6 +123,7 @@ class CandidateManagerViewController: UIViewController {
         if (segue.identifier == "addCandidateSegue") {
             if let destination = segue.destinationViewController as? AddCandidateViewController {
                 destination.delegate = self
+                destination.myObservedClass = self.addCandidateObserver
                 self.delegate = destination
             }
         }

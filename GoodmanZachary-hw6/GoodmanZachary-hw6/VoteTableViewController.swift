@@ -80,7 +80,6 @@ class VoteTableViewController: UIViewController, UITableViewDataSource, UITableV
         candidate.setValue(votes, forKey: "numVotes")
         
         self.voteObserver.updateProperty("voted")
-        self.delegate.saveCoreData()
         
         self.dismissViewControllerAnimated(true, completion: nil)
     }
