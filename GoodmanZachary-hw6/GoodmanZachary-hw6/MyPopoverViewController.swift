@@ -15,6 +15,7 @@ class MyPopoverViewController: UIViewController, UIPopoverPresentationController
     // ------------
     
     var delegate : CandidateManagerViewController!
+    var voteObserver: MyObservedClass!
     
     var type : String!
     var voteTable : VoteTableViewController!
@@ -78,6 +79,7 @@ class MyPopoverViewController: UIViewController, UIPopoverPresentationController
         }
         else {
             self.voteTable.delegate = self.delegate
+            self.voteTable.voteObserver = self.voteObserver
             sourceController.presentViewController(self.voteTable, animated: true, completion: nil)
         }
     }

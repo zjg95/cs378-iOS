@@ -11,6 +11,7 @@ import CoreData
 
 class VoteTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    var voteObserver: MyObservedClass!
     var delegate : CandidateManagerViewController!
     
     let cellId:String = "CellId"
@@ -78,6 +79,7 @@ class VoteTableViewController: UIViewController, UITableViewDataSource, UITableV
         
         candidate.setValue(votes, forKey: "numVotes")
         
+        self.voteObserver.updateProperty("voted")
         self.delegate.saveCoreData()
         
         self.dismissViewControllerAnimated(true, completion: nil)

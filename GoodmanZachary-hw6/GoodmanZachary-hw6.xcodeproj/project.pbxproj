@@ -17,6 +17,7 @@
 		8E8374851BD5D209005DDFFF /* AddCandidateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E83747C1BD5D209005DDFFF /* AddCandidateViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		8E8374881BD5D25F005DDFFF /* Candidate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8374871BD5D25F005DDFFF /* Candidate.swift */; settings = {ASSET_TAGS = (); }; };
 		8E83748A1BD5DF2C005DDFFF /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8374891BD5DF2C005DDFFF /* DataModel.swift */; settings = {ASSET_TAGS = (); }; };
+		8EAEE1851BD86F9300C83012 /* MyObservedClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAEE1841BD86F9300C83012 /* MyObservedClass.swift */; settings = {ASSET_TAGS = (); }; };
 		8EBD00EE1BD5D0010062E0C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBD00ED1BD5D0010062E0C3 /* AppDelegate.swift */; };
 		8EBD00F01BD5D0010062E0C3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBD00EF1BD5D0010062E0C3 /* ViewController.swift */; };
 		8EBD00F31BD5D0010062E0C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EBD00F11BD5D0010062E0C3 /* Main.storyboard */; };
@@ -55,6 +56,7 @@
 		8E83747C1BD5D209005DDFFF /* AddCandidateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCandidateViewController.swift; sourceTree = "<group>"; };
 		8E8374871BD5D25F005DDFFF /* Candidate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Candidate.swift; sourceTree = "<group>"; };
 		8E8374891BD5DF2C005DDFFF /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		8EAEE1841BD86F9300C83012 /* MyObservedClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyObservedClass.swift; sourceTree = "<group>"; };
 		8EBD00EA1BD5D0010062E0C3 /* GoodmanZachary-hw6.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GoodmanZachary-hw6.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EBD00ED1BD5D0010062E0C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8EBD00EF1BD5D0010062E0C3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				8EBD00F11BD5D0010062E0C3 /* Main.storyboard */,
 				8EBD00F71BD5D0010062E0C3 /* Assets.xcassets */,
 				8E83747C1BD5D209005DDFFF /* AddCandidateViewController.swift */,
+				8EAEE1841BD86F9300C83012 /* MyObservedClass.swift */,
 				8E8374751BD5D209005DDFFF /* CandidateTableViewController.swift */,
 				8E8374761BD5D209005DDFFF /* CandidateDetailViewController.swift */,
 				8E8374771BD5D209005DDFFF /* CandidateManagerViewController.swift */,
@@ -293,6 +296,7 @@
 			files = (
 				8EBD00F61BD5D0010062E0C3 /* GoodmanZachary_hw6.xcdatamodeld in Sources */,
 				8E83747E1BD5D209005DDFFF /* CandidateTableViewController.swift in Sources */,
+				8EAEE1851BD86F9300C83012 /* MyObservedClass.swift in Sources */,
 				8E8374801BD5D209005DDFFF /* CandidateManagerViewController.swift in Sources */,
 				8E8374881BD5D25F005DDFFF /* Candidate.swift in Sources */,
 				8E8374811BD5D209005DDFFF /* MyPopoverViewController.swift in Sources */,
