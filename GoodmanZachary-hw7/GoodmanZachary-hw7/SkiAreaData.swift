@@ -21,11 +21,18 @@ class SkiAreaData {
     
     var delegate: SkiAreaDataProtocol!
     
+    let error: Bool = true
+    
     // -------
     // methods
     // -------
     
     func getData(zipCode: String) {
-        delegate.responseError("No nearby ski facilities")
+        if error {
+            delegate.responseError("No nearby ski facilities")
+        }
+        else {
+            delegate.responseDataHandler(NSDictionary())
+        }
     }
 }
