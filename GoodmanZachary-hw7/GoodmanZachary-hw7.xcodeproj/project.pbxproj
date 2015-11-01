@@ -14,6 +14,7 @@
 		8E9D9E161BE69B5500437F10 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E9D9E141BE69B5500437F10 /* LaunchScreen.storyboard */; };
 		8E9D9E211BE69B5500437F10 /* GoodmanZachary_hw7Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9D9E201BE69B5500437F10 /* GoodmanZachary_hw7Tests.swift */; };
 		8E9D9E2C1BE69B5500437F10 /* GoodmanZachary_hw7UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9D9E2B1BE69B5500437F10 /* GoodmanZachary_hw7UITests.swift */; };
+		8E9D9E3A1BE6BB4200437F10 /* SkiAreaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9D9E391BE6BB4200437F10 /* SkiAreaData.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		8E9D9E271BE69B5500437F10 /* GoodmanZachary-hw7UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GoodmanZachary-hw7UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E9D9E2B1BE69B5500437F10 /* GoodmanZachary_hw7UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodmanZachary_hw7UITests.swift; sourceTree = "<group>"; };
 		8E9D9E2D1BE69B5500437F10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8E9D9E391BE6BB4200437F10 /* SkiAreaData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkiAreaData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				8E9D9E0B1BE69B5500437F10 /* AppDelegate.swift */,
 				8E9D9E0D1BE69B5500437F10 /* ViewController.swift */,
 				8E9D9E0F1BE69B5500437F10 /* Main.storyboard */,
+				8E9D9E391BE6BB4200437F10 /* SkiAreaData.swift */,
 				8E9D9E121BE69B5500437F10 /* Assets.xcassets */,
 				8E9D9E141BE69B5500437F10 /* LaunchScreen.storyboard */,
 				8E9D9E171BE69B5500437F10 /* Info.plist */,
@@ -258,6 +261,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E9D9E3A1BE6BB4200437F10 /* SkiAreaData.swift in Sources */,
 				8E9D9E0E1BE69B5500437F10 /* ViewController.swift in Sources */,
 				8E9D9E0C1BE69B5500437F10 /* AppDelegate.swift in Sources */,
 			);

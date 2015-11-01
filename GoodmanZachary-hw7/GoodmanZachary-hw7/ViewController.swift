@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, SkiAreaDataProtocol {
     
     // -------
     // outlets
@@ -26,6 +26,17 @@ class ViewController: UIViewController {
     // -------
     // methods
     // -------
+    
+    func responseDataHandler(data: NSDictionary) {
+        
+    }
+    
+    func responseError(message: String) {
+        messageLabel.text = message
+        areaNameLabel.text = ""
+        countryLabel.text = ""
+        regionLabel.text = ""
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
