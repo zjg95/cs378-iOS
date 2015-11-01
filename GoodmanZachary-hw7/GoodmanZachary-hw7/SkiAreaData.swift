@@ -19,11 +19,13 @@ class SkiAreaData {
     // data members
     // ------------
     
+    var delegate: SkiAreaDataProtocol!
+    
     // -------
     // methods
     // -------
     
     func getData(zipCode: String) {
-        
+        delegate.responseError("No nearby ski facilities")
     }
 }

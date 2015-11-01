@@ -10,6 +10,12 @@ import UIKit
 
 class ViewController: UIViewController, SkiAreaDataProtocol {
     
+    // ------------
+    // data members
+    // ------------
+    
+    let data: SkiAreaData = SkiAreaData()
+    
     // -------
     // outlets
     // -------
@@ -21,6 +27,7 @@ class ViewController: UIViewController, SkiAreaDataProtocol {
     @IBOutlet weak var messageLabel: UILabel!
     
     @IBAction func button(sender: AnyObject) {
+        data.getData(zipCodeField.text!)
     }
     
     // -------
@@ -41,6 +48,7 @@ class ViewController: UIViewController, SkiAreaDataProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        data.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
