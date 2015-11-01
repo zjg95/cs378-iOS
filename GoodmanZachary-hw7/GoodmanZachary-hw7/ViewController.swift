@@ -9,7 +9,24 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    // -------
+    // outlets
+    // -------
 
+    @IBOutlet weak var zipCodeField: UITextField!
+    @IBOutlet weak var areaNameLabel: UILabel!
+    @IBOutlet weak var countryLabel: UILabel!
+    @IBOutlet weak var regionLabel: UILabel!
+    @IBOutlet weak var messageLabel: UILabel!
+    
+    @IBAction func button(sender: AnyObject) {
+    }
+    
+    // -------
+    // methods
+    // -------
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
