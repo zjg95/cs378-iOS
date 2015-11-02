@@ -21,7 +21,7 @@ class SkiAreaData {
     
     var delegate: SkiAreaDataProtocol!
     
-    private let urlBegin: String = "http://ap.worldweatheronline.com/free/v2/ski.ashx?q="
+    private let urlBegin: String = "http://api.worldweatheronline.com/free/v2/ski.ashx?q="
     
     private let urlEnd: String = "&format=json&includelocation=yes&key=44e74f8f2c38b1ab0ffbbf7c1253c"
     
@@ -33,8 +33,44 @@ class SkiAreaData {
         return NSURL(string: urlBegin + zipCode + urlEnd)!
     }
     
-    private func getRawJSON(url: NSURL) -> NSDictionary {
-        return NSDictionary()
+    private func getTask(url: NSURL) -> NSURLSessionDataTask {
+        let session = NSURLSession.sharedSession()
+        return session.dataTaskWithURL(url) { (data, response, error) -> Void in
+            var json: NSDictionary!
+            if error != nil {
+                print(error)
+            } else {
+                //print(response)
+                do {
+                    let jsonResult = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers) as? NSDictionary
+                    if jsonResult != nil {
+                        if let d: NSDictionary = jsonResult!["data"] as? NSDictionary {
+                            json = d
+                        }
+                        else {
+                            print("couldn't make a dictionary")
+                        }
+                    }
+                    else {
+                        print("no json returned")
+                    }
+                } catch {
+                    // do something
+                    print("caught an error")
+                }
+            }
+            if json != nil {
+                self.didReceiveData(json)
+            }
+            else {
+                print("json is nil!")
+            }
+        }
+    }
+    
+    private func sendRequest(url: NSURL) {
+        let task = getTask(url)
+        task.resume() // start the request
     }
     
     private func getParsedJSON(json: NSDictionary) -> NSDictionary? {
@@ -42,7 +78,14 @@ class SkiAreaData {
             // error exists in data
             return nil
         }
-        return json
+        let parsed: NSDictionary = NSDictionary()
+        if let nearest_area = (json["nearest_area"] as? NSArray)![0] as? NSDictionary {
+            
+        }
+        else {
+            print("unable to get dictionary")
+        }
+        return parsed
     }
     
     func session(url: NSURL) {
@@ -51,11 +94,11 @@ class SkiAreaData {
             if error != nil {
                 print(error)
             } else {
-                print(response)
+                // print(response)
                 do {
                     let jsonResult = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers) as? NSDictionary
                     if jsonResult != nil {
-                        if let results: NSDictionary = jsonResult!["data"] as? NSDictionary {
+                        if let _: NSDictionary = jsonResult!["data"] as? NSDictionary {
 //                            self.weather = results["data"] as? NSArray
 //                            if self.weather != nil {
 //                                
@@ -80,14 +123,22 @@ class SkiAreaData {
         task.resume() // start the request
     }
     
-    func getData(zipCode: String) {
-        let url: NSURL = getURL(zipCode)
-        let json: NSDictionary = getRawJSON(url)
+    func didReceiveData(json: NSDictionary) {
+        print(json)
+        var closure = {}
         if let parsedJSON = getParsedJSON(json) {
-            self.delegate.responseDataHandler(parsedJSON)
+            closure = {self.delegate.responseDataHandler(parsedJSON)}
         }
         else {
-            delegate.responseError("No nearby ski facilities")
+            closure = {self.delegate.responseError("No nearby ski facilities")}
         }
+        dispatch_async(dispatch_get_main_queue()) {
+            closure()
+        }
+    }
+    
+    func getData(zipCode: String) {
+        let url: NSURL = getURL(zipCode)
+        sendRequest(url)
     }
 }
