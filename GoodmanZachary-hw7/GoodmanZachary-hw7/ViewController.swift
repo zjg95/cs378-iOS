@@ -35,7 +35,10 @@ class ViewController: UIViewController, SkiAreaDataProtocol {
     // -------
     
     func responseDataHandler(data: NSDictionary) {
-        print("got results")
+        areaNameLabel.text = data["areaName"] as? String
+        countryLabel.text = data["country"] as? String
+        regionLabel.text = data["region"] as? String
+        messageLabel.text = ""
     }
     
     func responseError(message: String) {
