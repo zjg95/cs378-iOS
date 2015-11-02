@@ -1,4 +1,5 @@
 # ignore the following files:
+api_key
 *.DS_Store
 *xcuserstate
 *xcuserdata/
