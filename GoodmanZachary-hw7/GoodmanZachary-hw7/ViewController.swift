@@ -35,7 +35,7 @@ class ViewController: UIViewController, SkiAreaDataProtocol {
     // -------
     
     func responseDataHandler(data: NSDictionary) {
-        
+        print("got results")
     }
     
     func responseError(message: String) {

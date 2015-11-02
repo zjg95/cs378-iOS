@@ -101,8 +101,8 @@
 			children = (
 				8E9D9E0B1BE69B5500437F10 /* AppDelegate.swift */,
 				8E9D9E0D1BE69B5500437F10 /* ViewController.swift */,
-				8E9D9E0F1BE69B5500437F10 /* Main.storyboard */,
 				8E9D9E391BE6BB4200437F10 /* SkiAreaData.swift */,
+				8E9D9E0F1BE69B5500437F10 /* Main.storyboard */,
 				8E9D9E121BE69B5500437F10 /* Assets.xcassets */,
 				8E9D9E141BE69B5500437F10 /* LaunchScreen.storyboard */,
 				8E9D9E171BE69B5500437F10 /* Info.plist */,
@@ -490,6 +490,7 @@
 				8E9D9E321BE69B5500437F10 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8E9D9E331BE69B5500437F10 /* Build configuration list for PBXNativeTarget "GoodmanZachary-hw7Tests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +499,7 @@
 				8E9D9E351BE69B5500437F10 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8E9D9E361BE69B5500437F10 /* Build configuration list for PBXNativeTarget "GoodmanZachary-hw7UITests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +508,7 @@
 				8E9D9E381BE69B5500437F10 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
